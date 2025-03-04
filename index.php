@@ -1,8 +1,9 @@
 <?php
-$name = "yogi";
-$age = 15;
-$from = "indonesia";
-
+$radius = 25;
+$pi = 3.14;
+$area = $pi * $radius ** 2;
+$celcius = 32;
+$fahrenheit = ($celcius * 9/5) + 32;
 ?>
 
 <!DOCTYPE html>
@@ -39,11 +40,10 @@ $from = "indonesia";
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container"></div>
         <h1>Introduction</h1>
-        <p><strong>Name:</strong> <?php echo $name; ?></p>
-        <p><strong>Age:</strong> <?php echo $age; ?></p>
-        <p><strong>From:</strong> <?php echo $from; ?></p>
+        <p><strong>Radius:</strong> <?php echo $radius; ?></p>
+        <p><strong>Area:</strong> <?php echo $area; ?></p>
     </div>
 </body>
 </html>
