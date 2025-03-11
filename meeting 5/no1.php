@@ -1,13 +1,14 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nama = htmlspecialchars(string: $_POST['nama']);
-    $email = htmlspecialchars(string: $_POST['email']);
-    $password = htmlspecialchars(string: $_POST['password']);
+    $nama = htmlspecialchars($_POST['nama']);
+    $email = htmlspecialchars($_POST['email']);
+    $password = htmlspecialchars($_POST['password']);
 
     if (!empty($nama) && !empty($email) && !empty($password)) {
-        echo "Selamat datang, $nama!";
+        echo "Selamat datang, <b>$nama</b>!<br>";
+        echo "Email Anda: <b>$email</b>";
     } else {
-        echo "Harap isi semua kolom!";
+        echo "<p style='color:red;'>Harap isi semua kolom!</p>";
     }
 }
 ?>

@@ -8,7 +8,7 @@ $produk = [
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $kategori = $_POST['kategori'];
 
-    if (array_key_exists($kategori, $produk)) {
+    if (array_key_exists(key: $kategori, array: $produk)) {
         echo "Daftar Produk $kategori:<br>";
         echo "<ul>";
         foreach ($produk[$kategori] as $item) {
