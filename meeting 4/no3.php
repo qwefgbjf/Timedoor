@@ -14,14 +14,18 @@
     </form>
     <?php 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $number = intval(value: $_POST['number']);
-        $fibonacci = [0, 1];
-        for ($i = 2; $i < $number; $i++) {
-            $fibonacci[$i] = $fibonacci[$i - 1] + $fibonacci[$i - 2];
+        $number = intval($_POST['number']);
+        
+        function fibonacci($n) {
+            if ($n <= 1) {
+                return $n;
+            }
+            return fibonacci($n - 1) + fibonacci($n - 2);
         }
+        
         echo "Fibonacci: ";
         for ($i = 0; $i < $number; $i++) {
-            echo $fibonacci[$i] . " ";
+            echo fibonacci($i) . " ";
         }
     }
     ?>
